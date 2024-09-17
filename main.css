@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn1{
+    @apply bg-secondary text-white font-mulish py-4 px-12 rounded-[50px] font-bold text-[20px]
+}
+.banner{
+    @apply h-[550px] w-[100%] bg-banner bg-no-repeat bg-cover bg-primary rounded-[32px]
+}
+h1{
+    @apply text-white font-mulish font-black text-6xl leading-[86px] 
+}
+h1 span{
+    background: linear-gradient(90deg, #797DFC 0.63%, rgba(121, 125, 252, 0.00) 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Mulish;
+font-size: 64px;
+font-style: normal;
+font-weight: 900;
+line-height: 86px;
+}
+h2{
+    @apply text-white font-mulish font-medium text-[20px]  
+}
+input{
+    @apply px-5 py-4 rounded-[50px] mt-2 flex-shrink-0 w-[400px]
+}
+.btn2{
+    @apply bg-secondary text-white font-mulish font-bold py-2 px-9 rounded-[46px] 
+}
