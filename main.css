@@ -33,3 +33,13 @@ input{
 .btn2{
     @apply bg-secondary text-white font-mulish font-bold py-2 px-9 rounded-[46px] 
 }
+h4{
+    @apply text-center text-black font-black text-[40px] font-mulish
+}
+p{
+    @apply text-center font-inter text-black/60 text-[18px]
+}
+
+h6{
+    @apply font-mulish text-[20px] font-bold
+}
