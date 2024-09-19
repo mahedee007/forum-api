@@ -43,7 +43,7 @@ const displayPosts = (posts)=>{
                                         
                                     </div>
                                         <div>
-                                        <img onclick="showDetails('${post.id}')" src="./images/email 1.svg" alt="">
+                                        <img onclick="showDetails({ title: '${post.title}', viewCount: '${post.view_count}' })" src="./images/email 1.svg" alt="">
                                         </div>
                                 </div>
                             </div>  
@@ -57,11 +57,30 @@ const displayPosts = (posts)=>{
 
     
 }
-const showDetails = (id) => {
-    console.log(id);
+const showDetails = ({ title, viewCount }) => {
+    const rightSide = document.getElementById('right-side');
+    
+    
+    
+    const div1 = document.createElement('div');
+    div1.classList.add('flex', 'items-start', 'justify-between', 'bg-body', 'p-3', 'rounded-3xl');
+    div1.innerHTML = `<h6>${title}</h6>
+                    <div class="flex items-center"><img src="./images/tabler-icon-eye.svg" alt="">
+                        <p>${viewCount}</p>
+                    </div> `
+    rightSide.appendChild(div1);
+    
+    
+    setCounter();
     // fetch post details and display in modal or new page.
     
     
+}
+const setCounter = ()=>{
+    const counterElement = document.getElementById("counter");
+      const currentCount = parseInt(counterElement.innerText);
+      const newCount = currentCount + 1;
+      counterElement.innerText = newCount;
 }
 
 const handleSearch = ()=>{
